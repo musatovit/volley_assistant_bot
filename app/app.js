@@ -4,7 +4,7 @@ const createPoll = require("./features/createPoll");
 const editText = require("./features/editText");
 
 
-const token = '6308166992:AAE_d-2vaDGTI7CYFiCgqum4gVdo3TBMMnM'
+const token = ''
 
 const bot = new TelegramBot(token, { polling: true });
 
