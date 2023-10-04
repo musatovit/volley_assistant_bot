@@ -24,14 +24,10 @@ bot.command('hello', handleHello)
 
 bot.on('text', handleText);
 
-// const PORT = process.env.PORT || 3000;
-//
-// ngrok.connect(PORT).then(url => {
-//     console.log(`ngrok url: ${url}`);
-//     bot.telegram.setWebhook(`${url}/${bot.token}`).then(() => console.log('Webhook set on:', `${url}/${bot.token}`))
-//     bot.startWebhook(`/${bot.token}`, null, PORT)
-// });
-
-bot.telegram.setWebhook(`'https://92.51.39.116/${bot.token}`).then(() => console.log('Webhook set'))
-bot.startWebhook(`/${bot.token}`, null, 3000)
+bot.launch({
+    webhook: {
+        domain: 'https://92.51.39.116',
+        port: 3000
+    }
+});
 
