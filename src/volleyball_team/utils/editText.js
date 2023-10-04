@@ -21,7 +21,7 @@ function editText(query, list, players) {
     })
     return `---${list.date}---\n${list.teams.map(el => {
         return `${Object.keys(el)}:\n${Object.values(el).join('\n').split(',').join('\n')}\n`
-    }).join('\n')}`
+    }).join('\n')}`;
 }
 
 module.exports = editText
