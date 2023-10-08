@@ -17,8 +17,9 @@ require('../global')
         ctx.reply(text, list[`btn${teams[0]}`]);
         setTimeout( ()=> {
             ctx.deleteMessage(ctx.update.message.message_id+1)
-        }, 1000*60*15)
-    } else if (teams === 'выходной') {
+        }, 1000*60*60*2)
+    } else if ((teams === 'выходной')&&(ctx.update.message.from.id !== 777000)) {
+        console.log(ctx.update.message.from.id)
         ctx.sendSticker('CAACAgIAAxkBAAIEQGUTz10xW-DiW9L0G4FqSvYxxxQ6AAK4FQACIpTgS9kgukBBCDutMAQ')
         setTimeout( ()=>{
             ctx.deleteMessage(ctx.update.message.message_id+1)
