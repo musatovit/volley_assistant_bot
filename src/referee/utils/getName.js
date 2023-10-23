@@ -1,5 +1,4 @@
 function getName(query, players) {
-    console.log(query.from)
     return players.some(el => el.id === query.from.id)
         ? players.find(el => el.id === query.from.id).name
         : query.from['last_name']
