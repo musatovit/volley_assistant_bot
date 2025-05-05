@@ -3,7 +3,6 @@ const rateLimit = require('telegraf-ratelimit');
 const {handleText} = require('./src/handleText')
 const {actions} = require("./src/actions");
 const {handleTextReferee} = require("./src/referee/handleTextReferee");
-const ngrok = require('ngrok');
 const {handleHello} = require("./src/volleyball_team/handleHello");
 require('dotenv').config()
 
